@@ -15,11 +15,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\User::factory(10)->create();
-
+        \App\Models\User::factory(5)->create();
+        \App\Models\Project::factory(5)->create();
+        \App\Models\Training::factory(5)->create();
+        \App\Models\TrainingUser::factory(5)->create();
 
         $admin = User::create([
             'name' => "admin",
+            'surname' => "admin",
+            'gender' => 'male',
+            'role' => '0',
             'email' => 'admin@gmail.com',
             'email_verified_at' => now(),
             'password' => Hash::make('123'),
