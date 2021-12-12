@@ -18,7 +18,7 @@ class ProjectFactory extends Factory
     {
         $types = ['intern', 'contractual', 'grant'];
         return [
-            'number' => $this->faker->randomDigit(),
+            'project_number' => $this->faker->randomDigit(),
             'name' => $this->faker->name(),
             'shortcut' => $this->faker->name(),
             'region' => $this->faker->city(),

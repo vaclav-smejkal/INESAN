@@ -12,7 +12,7 @@ class Project extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'number',
+        'project_number',
         'name',
         'shortcut',
         'region',

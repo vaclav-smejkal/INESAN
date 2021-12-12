@@ -21,10 +21,9 @@ class DatabaseSeeder extends Seeder
         \App\Models\TrainingUser::factory(5)->create();
 
         $admin = User::create([
-            'name' => "admin",
-            'surname' => "admin",
-            'gender' => 'male',
-            'role' => '0',
+            'first_name' => "admin",
+            'last_name' => "admin",
+            'gender' => 'Muž',
             'email' => 'admin@gmail.com',
             'email_verified_at' => now(),
             'password' => Hash::make('123'),
