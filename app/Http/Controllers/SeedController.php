@@ -9,6 +9,7 @@ class SeedController extends Controller
 {
     public function index()
     {
+        Artisan::call("cache:clear");
         Artisan::call("migrate:fresh");
         Artisan::call("permission:create-role admin");
         Artisan::call("permission:create-role director");
