@@ -13,7 +13,7 @@ class ProjectDocument extends Model
 
     protected $fillable = [
         'project_documentation',
-        'DPP',
+        'dpp',
         'payroll_overview',
         'financial_overview',
         'final_report',

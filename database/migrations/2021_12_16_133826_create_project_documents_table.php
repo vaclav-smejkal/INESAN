@@ -16,7 +16,7 @@ class CreateProjectDocumentsTable extends Migration
         Schema::create('project_documents', function (Blueprint $table) {
             $table->id();
             $table->boolean('project_documentation');
-            $table->boolean('DPP');
+            $table->boolean('dpp');
             $table->boolean('payroll_overview');
             $table->boolean('financial_overview');
             $table->boolean('final_report');
