@@ -47,6 +47,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
     //M:N USERTRAININGS
     public function trainings()
     {
@@ -62,6 +63,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(RealisedGrant::class);
     }
+
     //M:N UserProjectDocument
     public function projectDocuments()
     {

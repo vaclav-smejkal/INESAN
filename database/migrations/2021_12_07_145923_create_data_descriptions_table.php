@@ -13,14 +13,6 @@ class CreateDataDescriptionsTable extends Migration
      */
     public function up()
     {
-        //Sběr dat od (rok, měsíc - datum)
-        //Sběr dat do (rok, měsíc - datum)
-        //Data (checkbox)
-        //Labely (checkbox)
-        ///Syntax (checkbox)
-        //Dotazník (checkbox)
-        //Rešerše (checkbox)
-
         Schema::create('data_descriptions', function (Blueprint $table) {
             $table->id();
             $table->date('from');

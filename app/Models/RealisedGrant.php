@@ -28,10 +28,12 @@ class RealisedGrants extends Model
     {
         return $this->belongsTo(User::class);
     }
+
     public function projects()
     {
         return $this->belongsTo(Project::class);
     }
+
     public function roles()
     {
         return $this->belongsTo(Role::class);
