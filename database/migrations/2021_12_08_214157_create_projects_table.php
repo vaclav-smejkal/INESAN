@@ -28,6 +28,9 @@ class CreateProjectsTable extends Migration
             $table->integer('own_sources');
             $table->integer('support_amount');
             $table->string('provider');
+            $table->foreignId('data_description_id')->constrained('data_descriptions');
+            $table->foreignId('project_description_id')->constrained('project_descriptions');
+            $table->foreignId('contact_person_id')->constrained('contact_people');
         });
     }
 
