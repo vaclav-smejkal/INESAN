@@ -16,6 +16,7 @@ class ProjectTeam extends Model
         'project_id',
         'role_id',
     ];
+
     public function user()
     {
         return $this->belongsTo(User::class);
