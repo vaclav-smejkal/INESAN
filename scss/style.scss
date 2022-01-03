@@ -60,6 +60,32 @@ body {
     }
 }
 
+.header-login {
+    background-color: $primary-red;
+    transition: transform .2s;
+    transform-origin: center;
+}
+
+.login-form {
+    width: 75%;
+}
+
+.btn-forgot {
+    color: $text-primary;
+    right: 0;
+    bottom: 120px;
+    font-size: .9rem;  
+
+    &:hover {
+        color: $primary-red;
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(1)  
+    }
+}
+
 .btn-discard {
     color: $text-primary;
     transition: transform .2s;
@@ -90,6 +116,10 @@ h1 {
         left: 0;
         background-color: $primary-red;
     }
+}
+
+.login-content {
+   width: 40%;
 }
 
 .content {
