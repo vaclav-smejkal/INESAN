@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\SeedController;
@@ -14,7 +15,6 @@ use App\Http\Controllers\SeedController;
 |
 */
 
-Route::get('/', function () {
-});
+Route::get('/', [DashboardController::class, 'index']);
 
 Route::get('/seed', [SeedController::class, 'index']);

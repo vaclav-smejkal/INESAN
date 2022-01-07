@@ -1,0 +1,246 @@
+@import "variables";
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: $bg-body;
+    color: $text-primary;
+}
+
+.open-tab-title {
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 205px;
+        top: 15px;
+        border: 1px inset $btn-secondary;
+        height: 50px;
+    }
+}
+
+.navbar:first-of-type {
+    background-color: $primary-red;
+}
+
+.fa-users,
+.fa-home {
+    color: $primary-red;
+}
+
+.navigation .nav-link {
+    color: $text-primary;
+    transition: transform .2s;
+    transform-origin: center;
+    transform: translateZ(0);
+
+    &:hover {
+        color: $primary-red;
+        transform: scale(1.05);
+    }
+}
+
+.admin {
+    transition: transform .2s;
+    transform-origin: center;
+    transform: translateZ(0);
+
+    &:hover {
+        transform: scale(1.07);
+    }
+}
+
+.header-login {
+    background-color: $primary-red;
+    transition: transform .2s;
+    transform-origin: center;
+}
+
+.login-form {
+    width: 75%;
+}
+
+.btn-forgot {
+    color: $text-primary;
+    right: 0;
+    bottom: 120px;
+    font-size: .9rem;  
+
+    &:hover {
+        color: $primary-red;
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(1)  
+    }
+}
+
+.btn-discard {
+    color: $text-primary;
+    transition: transform .2s;
+    transform-origin: center;
+    border: none;
+    position: sticky;
+    top: 60px;
+    
+    &:hover {
+        color: $primary-red;
+        transform: scale(1.05);
+    }
+    &:active {
+        transform: scale(1)  
+    }
+}
+
+h1 {
+    display: inline-block;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        bottom: 0;
+        left: 0;
+        background-color: $primary-red;
+    }
+}
+
+.login-content {
+   width: 40%;
+}
+
+.content {
+    width: 60%;    
+}
+
+.form-control {
+
+    &:focus {
+        border-color: $primary-red;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 7px $primary-red;
+    }
+}
+
+.form-check-input {
+    
+    &:checked {
+        background-color: $primary-red;
+        border: 1px solid $primary-red;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 7px $primary-red;
+    }
+
+    &:active {
+        border: 1px solid $primary-red;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 7px $primary-red;
+    }
+
+    &:focus {
+        border: 1px solid $primary-red;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 7px $primary-red;
+    }
+}
+
+.btn {
+    transition: background-color 1s ease-in-out;
+
+    &-submit {
+        background-color: $btn-submit-save;
+        border: 2px solid $btn-submit-save;
+        color: $btn-secondary;
+        min-width: 179px;
+    
+        &:hover {
+            background-color: $btn-secondary;
+            border: 2px solid $btn-submit-save;
+            color: $btn-submit-save;
+            box-shadow: inset 6.5em 0 0 0 var(--hover);
+        }
+    
+        &:focus {
+            background-color: $btn-submit-save;
+            border: 2px solid $btn-submit-save;
+            color: $btn-secondary;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 7px $btn-submit-save;
+        }
+        
+        &:active {
+            background-color: $btn-secondary;
+            border: 2px solid $btn-submit-save;
+            color: $btn-submit-save;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 7px $btn-submit-save;
+        }
+    }
+    
+    &-save {
+        background-color: $btn-secondary;
+        border: 2px solid $btn-submit-save;
+        color: $btn-submit-save;
+        min-width: 132px;
+    
+        &:hover {
+            background-color: $btn-submit-save;
+            border: 2px solid $btn-submit-save;
+            color: $btn-secondary;
+        }
+    
+        &:focus {
+            background-color: $btn-secondary;
+            border: 2px solid $btn-submit-save;
+            color: $btn-submit-save;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 7px $btn-submit-save;
+        }
+
+        &:active {
+            background-color: $btn-submit-save;
+            border: 2px solid $btn-submit-save;
+            color: $btn-secondary;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 7px $btn-submit-save;
+        }        
+    }
+
+    &-cancel {
+
+        background-color: $btn-secondary;
+        border: 2px solid $primary-red;
+        color: $primary-red;
+        min-width: 149px;
+    
+        &:hover {
+            background-color: $primary-red;
+            border: 2px solid $primary-red;
+            color: $btn-secondary;
+        }
+    
+        &:focus {
+            background-color: $btn-secondary;
+            border: 2px solid $primary-red;
+            color: $primary-red;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 7px $primary-red;
+        }
+
+        &:active {
+            background-color: $primary-red;
+            border: 2px solid $primary-red;
+            color: $btn-secondary;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 7px $primary-red;
+        }
+    }
+}
+
+footer {
+    background-color: $primary-red;
+    color: $btn-secondary;
+}
