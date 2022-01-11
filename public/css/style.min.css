@@ -12,6 +12,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #f2f2f2;
   color: #696969;
+  height: 100vh;
 }
 
 .open-tab-title::before {
@@ -44,12 +45,14 @@ body {
   transform: scale(1.05);
 }
 
-.admin {
+.admin,
+.logout {
   transition: transform 0.2s;
   transform-origin: center;
   transform: translateZ(0);
 }
-.admin:hover {
+.admin:hover,
+.logout:hover {
   transform: scale(1.07);
 }
 
@@ -59,15 +62,8 @@ body {
   transform-origin: center;
 }
 
-.login-form {
-  width: 75%;
-}
-
 .btn-forgot {
   color: #696969;
-  right: 0;
-  bottom: 120px;
-  font-size: 0.9rem;
 }
 .btn-forgot:hover {
   color: #a70a25;
@@ -108,7 +104,7 @@ h1:after {
   background-color: #a70a25;
 }
 
-.login-content {
+.container-login {
   width: 40%;
 }
 

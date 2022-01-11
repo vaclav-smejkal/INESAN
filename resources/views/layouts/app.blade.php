@@ -16,7 +16,7 @@
     <title>@yield("title")</title>
 </head>
 
-<body>
+<body class="d-flex flex-column">
     <nav class="navbar navbar-expand-sm">
         <div class="container d-flex">
             <ul class="navbar-nav d-flex flex-fill justify-content-between align-items-center">
@@ -25,9 +25,14 @@
                             src="https://inesan.eu/wp-content/uploads/2020/10/logo_Inesan-bile-260x65-1.png"></a>
                     <h3 class="open-tab-title text-white mx-5 mb-0">Nástěnka</h3>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white admin" href="#">Admin<i class="fas fa-users-cog fa-lg mx-3"></i></a>
-                </li>
+                <div class="d-flex">
+                    <li class="nav-item">
+                        <a class="nav-link text-white admin" href="#">Admin<i class="fas fa-users-cog fa-lg mx-3"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white logout" href="#">Odhlásit<i class="fas fa-sign-out-alt fa-lg mx-3"></i></a>
+                    </li>
+                </div>   
             </ul>
         </div>
     </nav>
