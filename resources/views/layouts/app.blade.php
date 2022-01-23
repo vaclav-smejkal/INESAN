@@ -27,12 +27,18 @@
                 </li>
                 <div class="d-flex">
                     <li class="nav-item">
-                        <a class="nav-link text-white admin" href="#">Admin<i class="fas fa-users-cog fa-lg mx-3"></i></a>
+                        <a class="nav-link text-white admin" href="#">Admin<i
+                                class="fas fa-users-cog fa-lg mx-3"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white logout" href="#">Odhlásit<i class="fas fa-sign-out-alt fa-lg mx-3"></i></a>
+                        <a class="nav-link text-white logout" href="{{ route('logout') }}"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Odhlásit
+                            <i class="fas fa-sign-out-alt fa-lg mx-3"></i></a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                            @csrf
+                        </form>
                     </li>
-                </div>   
+                </div>
             </ul>
         </div>
     </nav>

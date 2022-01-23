@@ -15,6 +15,13 @@
                     <label for="email">E-mail:</label>
                     <input type="email" class="form-control" id="email" name="email" required>
                 </div>
+
+                @error('email')
+                    <span role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+
                 <div class="form-footer">
                     <button type="submit" class="btn btn-submit mb-4 d-block m-auto w-75">Poslat email</button>
                 </div>
