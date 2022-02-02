@@ -6,11 +6,14 @@ use App\Actions\Fortify\CreateNewUser;
 use App\Actions\Fortify\ResetUserPassword;
 use App\Actions\Fortify\UpdateUserPassword;
 use App\Actions\Fortify\UpdateUserProfileInformation;
+use App\Models\User;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Fortify\Fortify;
+use Spatie\Permission\Models\Role;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -39,9 +42,21 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::loginView(function () {
             return view('auth.login');
         });
-
         Fortify::registerView(function () {
-            return view('auth.register');
+            $highers = User::whereHas("roles", function ($q) {
+                $q->where("name", "Administrator")
+                    ->orWhere("name", "Director")
+                    ->orWhere("name", "Supervisor");
+            })->get();
+            $roles = Role::whereNotIn('name', [
+                'Guarantor',
+                'Solver',
+                'Co_solver',
+                'Team_member',
+                'Assistant_worker'
+            ])->get();
+
+            return view('auth.register', ['highers' => $highers, 'roles' => $roles]);
         });
 
         Fortify::requestPasswordResetLinkView(function () {
