@@ -42,22 +42,6 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::loginView(function () {
             return view('auth.login');
         });
-        Fortify::registerView(function () {
-            $highers = User::whereHas("roles", function ($q) {
-                $q->where("name", "Administrator")
-                    ->orWhere("name", "Director")
-                    ->orWhere("name", "Supervisor");
-            })->get();
-            $roles = Role::whereNotIn('name', [
-                'Guarantor',
-                'Solver',
-                'Co_solver',
-                'Team_member',
-                'Assistant_worker'
-            ])->get();
-
-            return view('auth.register', ['highers' => $highers, 'roles' => $roles]);
-        });
 
         Fortify::requestPasswordResetLinkView(function () {
             return view('auth.forgot-password');

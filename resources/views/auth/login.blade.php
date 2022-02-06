@@ -15,10 +15,20 @@
                     <label for="email">E-mail:</label>
                     <input type="email" class="form-control" id="email" name="email" required>
                 </div>
+                @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
                 <div class="my-4">
                     <label for="pwd">Heslo:</label>
                     <input type="password" class="form-control" id="password" name="password" required>
                 </div>
+                @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
                 <div class="d-flex flex-wrap justify-content-between mb-3">
                     <div class="form-check my-2">
                         <label class="form-check-label">

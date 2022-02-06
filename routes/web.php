@@ -4,6 +4,8 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\SeedController;
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +17,9 @@ use App\Http\Controllers\SeedController;
 |
 */
 
-Route::get('/', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/', [DashboardController::class, 'index'])->middleware('auth')->name('home');
 
 Route::get('/seed', [SeedController::class, 'index']);
+
+Route::get('/user-create', [UserController::class, 'create'])->middleware('auth');
+Route::post('/user-store', [UserController::class, 'store'])->middleware('auth');
