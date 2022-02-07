@@ -1,0 +1,211 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f2f2f2;
+  color: #696969;
+  height: 100vh;
+}
+
+.open-tab-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 205px;
+  top: 15px;
+  border: 1px inset #ffffff;
+  height: 50px;
+}
+
+.navbar:first-of-type {
+  background-color: #a70a25;
+}
+
+.fa-users,
+.fa-home {
+  color: #a70a25;
+}
+
+.navigation .nav-link {
+  color: #696969;
+  transition: transform 0.2s;
+  transform-origin: center;
+  transform: translateZ(0);
+}
+.navigation .nav-link:hover {
+  color: #a70a25;
+  transform: scale(1.05);
+}
+
+.admin,
+.logout {
+  transition: transform 0.2s;
+  transform-origin: center;
+  transform: translateZ(0);
+}
+.admin:hover,
+.logout:hover {
+  transform: scale(1.07);
+}
+
+.header-login {
+  background-color: #a70a25;
+  transition: transform 0.2s;
+  transform-origin: center;
+}
+
+.btn-forgot {
+  color: #696969;
+}
+.btn-forgot:hover {
+  color: #a70a25;
+  transform: scale(1.05);
+}
+.btn-forgot:active {
+  transform: scale(1);
+}
+
+.btn-discard {
+  color: #696969;
+  transition: transform 0.2s;
+  transform-origin: center;
+  border: none;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 60px;
+}
+.btn-discard:hover {
+  color: #a70a25;
+  transform: scale(1.05);
+}
+.btn-discard:active {
+  transform: scale(1);
+}
+
+h1 {
+  display: inline-block;
+  position: relative;
+}
+h1:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #a70a25;
+}
+
+.container-login {
+  width: 40%;
+}
+
+.content {
+  width: 60%;
+}
+
+.form-control:focus {
+  border-color: #a70a25;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 7px #a70a25;
+}
+
+.form-check-input:checked {
+  background-color: #a70a25;
+  border: 1px solid #a70a25;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 7px #a70a25;
+}
+.form-check-input:active {
+  border: 1px solid #a70a25;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 7px #a70a25;
+}
+.form-check-input:focus {
+  border: 1px solid #a70a25;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 7px #a70a25;
+}
+
+.btn {
+  transition: background-color 1s ease-in-out;
+}
+.btn-submit {
+  background-color: #659157;
+  border: 2px solid #659157;
+  color: #ffffff;
+  min-width: 179px;
+}
+.btn-submit:hover {
+  background-color: #ffffff;
+  border: 2px solid #659157;
+  color: #659157;
+  box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+.btn-submit:focus {
+  background-color: #659157;
+  border: 2px solid #659157;
+  color: #ffffff;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 7px #659157;
+}
+.btn-submit:active {
+  background-color: #ffffff;
+  border: 2px solid #659157;
+  color: #659157;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 7px #659157;
+}
+.btn-save {
+  background-color: #ffffff;
+  border: 2px solid #659157;
+  color: #659157;
+  min-width: 132px;
+}
+.btn-save:hover {
+  background-color: #659157;
+  border: 2px solid #659157;
+  color: #ffffff;
+}
+.btn-save:focus {
+  background-color: #ffffff;
+  border: 2px solid #659157;
+  color: #659157;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 7px #659157;
+}
+.btn-save:active {
+  background-color: #659157;
+  border: 2px solid #659157;
+  color: #ffffff;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 7px #659157;
+}
+.btn-cancel {
+  background-color: #ffffff;
+  border: 2px solid #a70a25;
+  color: #a70a25;
+  min-width: 149px;
+}
+.btn-cancel:hover {
+  background-color: #a70a25;
+  border: 2px solid #a70a25;
+  color: #ffffff;
+}
+.btn-cancel:focus {
+  background-color: #ffffff;
+  border: 2px solid #a70a25;
+  color: #a70a25;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 7px #a70a25;
+}
+.btn-cancel:active {
+  background-color: #a70a25;
+  border: 2px solid #a70a25;
+  color: #ffffff;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 7px #a70a25;
+}
+
+footer {
+  background-color: #a70a25;
+  color: #ffffff;
+}
