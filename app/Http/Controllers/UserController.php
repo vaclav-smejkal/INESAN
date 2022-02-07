@@ -99,6 +99,10 @@ class UserController extends Controller
             $user->email = $request['email'];
             $user->gender = $request['gender'];
             $user->higher = $request['higher'];
+
+            if ($request['password']) {
+                $user->password = Hash::make($request['password']);
+            }
             $user->save();
         }
 

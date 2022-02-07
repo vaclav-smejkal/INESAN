@@ -64,7 +64,6 @@
                 </span>
                 @enderror
             </div>
-
             <div class="mb-3 mt-3">
                 <label for="form-select">Pohlaví:</label>
                 <select required class="form-select form-control" name="gender">
@@ -113,7 +112,17 @@
                     <strong>{{ $message }}</strong>
                 </span>
                 @enderror
-            </div>
+            @if(isset($user))
+                <div class="mb-3 mt-3">
+                    <label for="text">Heslo:</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Pro ponechání původního nechte pole prázdné">
+                    @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+            @endif
             @if(isset($user))
                 <button type="submit" class="btn btn-submit my-3">Aktualizovat uživatele</button>
             @else
