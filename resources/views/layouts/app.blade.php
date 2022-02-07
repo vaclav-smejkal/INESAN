@@ -43,13 +43,16 @@
         </div>
     </nav>
 
-    <nav class="navbar navbar-expand-sm justify-content-center bg-white sticky-top shadow p-2 mb-2 bg-white">
+    <nav class="navbar navbar-expand-sm justify-content-center bg-white sticky-top shadow p-2 mb-2">
         <ul class="navbar-nav navigation">
             <li class="nav-item mx-4">
                 <a class="nav-link" href="#">Nástěnka<i class="fas fa-home mx-2"></i></a>
             </li>
-            <li class="nav-item mx-4">
-                <a class="nav-link" href="#">Uživatelé<i class="fas fa-users mx-2"></i></a>
+            <li class="nav-item mx-4 dropdown">
+                <a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown">Uživatelé<i class="fas fa-users mx-2"></i></a>
+                <ul class="dropdown-menu border-0 rounded-0 shadow-sm">
+                    <li><a class="dropdown-item px-2" href="#">Přidat uživatele<i class="fas fa-user-plus mx-2"></i></a></li>
+                </ul>
             </li>
             <li class="nav-item mx-4">
                 <a class="nav-link" href="#">Link 3</a>
