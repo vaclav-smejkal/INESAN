@@ -30,19 +30,23 @@ body {
 }
 
 .fa-users,
-.fa-home {
+.fa-home,
+.fa-user-plus {
   color: #a70a25;
 }
 
-.navigation .nav-link {
+.navigation .nav-link,
+.dropdown-item {
   color: #696969;
   transition: transform 0.2s;
   transform-origin: center;
   transform: translateZ(0);
 }
-.navigation .nav-link:hover {
+.navigation .nav-link:hover,
+.dropdown-item:hover {
   color: #a70a25;
   transform: scale(1.05);
+  background-color: transparent;
 }
 
 .admin,

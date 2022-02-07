@@ -35,11 +35,13 @@ body {
 }
 
 .fa-users,
-.fa-home {
+.fa-home,
+.fa-user-plus {
     color: $primary-red;
 }
 
-.navigation .nav-link {
+.navigation .nav-link,
+.dropdown-item {
     color: $text-primary;
     transition: transform .2s;
     transform-origin: center;
@@ -48,6 +50,7 @@ body {
     &:hover {
         color: $primary-red;
         transform: scale(1.05);
+        background-color: transparent;
     }
 }
 
