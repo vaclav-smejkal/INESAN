@@ -23,3 +23,7 @@ Route::get('/seed', [SeedController::class, 'index']);
 
 Route::get('/user-create', [UserController::class, 'create'])->middleware('auth');
 Route::post('/user-store', [UserController::class, 'store'])->middleware('auth');
+
+Route::get('/user-list', [UserController::class, 'list'])->middleware('auth');
+
+Route::get('/user-edit/{id}', [UserController::class, 'edit'])->middleware('auth');
