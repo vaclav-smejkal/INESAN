@@ -63,13 +63,6 @@ class UserController extends Controller
             'password' => $password,
         );
 
-        Mail::send('email-registration', $email_data, function ($message) use ($email_data) {
-            $message->from('BCtestMail2@gmail.com');
-            $message->sender('BCtestMail2@gmail.com');
-            $message->to($email_data['email']);
-            $message->subject('INESAN registrace');
-        });
-
         $user = User::create([
             'first_name' => $request['first-name'],
             'last_name' => $request['last-name'],
@@ -81,6 +74,19 @@ class UserController extends Controller
             'password' => $passwordToDb,
         ]);
         $user->assignRole($request['role']);
+
+        try {
+            Mail::send('email-registration', $email_data, function ($message) use ($email_data) {
+                $message->from('BCtestMail2@gmail.com');
+                $message->sender('BCtestMail2@gmail.com');
+                $message->to($email_data['email']);
+                $message->subject('INESAN registrace');
+            });
+        } catch (\Exception $e) {
+        }
+
+
+
         return redirect('/user-create')->with('message', 'Uživatel byl přidán');
     }
 }
