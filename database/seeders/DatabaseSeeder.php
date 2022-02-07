@@ -6,6 +6,7 @@ use App\Models\DataDescription;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 use Spatie\Permission\Models\Role;
 
 class DatabaseSeeder extends Seeder
@@ -41,8 +42,9 @@ class DatabaseSeeder extends Seeder
             'first_name' => "admin",
             'last_name' => "admin",
             'gender' => 'Muž',
-            'email' => 'admin@gmail.com',
+            'email' => 'vasek.smejkall@seznam.cz',
             'email_verified_at' => now(),
+            'remember_token' => Str::random(10),
             'password' => Hash::make('123'),
         ]);
         $admin->assignRole('Administrator');

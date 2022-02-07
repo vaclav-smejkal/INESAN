@@ -15,6 +15,6 @@ use App\Http\Controllers\SeedController;
 |
 */
 
-Route::get('/', [DashboardController::class, 'index']);
+Route::get('/', [DashboardController::class, 'index'])->middleware('auth');
 
 Route::get('/seed', [SeedController::class, 'index']);
