@@ -32,7 +32,6 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        //var_dump($request);
         if ($request['user-id'] == null) {
             Validator::make(
                 $request->all(),

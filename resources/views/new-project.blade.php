@@ -6,15 +6,25 @@
     <div class="content mx-auto">
         <h1 class="p-2 my-4">Přidání nové zakázky smluvního výzkumu</h1>
         <div class="container mx-0 mb-5 bg-white position-relative">
-            <form class="p-3">
+            <form method="POST" action="/project-store" class="p-3">
                 <h2 class="p-2 my-4">Projektová část</h2>
                 <div class="mb-3 mt-3">
                     <label for="text">Číslo projektu:</label>
-                    <input type="text" class="form-control" id="project-number" name="project-number">
+                    <input type="text" class="form-control" id="project-number" name="project_number">
+                    @error('project_number')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="text">Pracovní název projektu:</label>
-                    <input type="text" class="form-control" id="working-title" name="working-title">
+                    <input type="text" class="form-control" id="name" name="name">
+                    @error('name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="text">Zkratka:</label>
@@ -22,59 +32,114 @@
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="text">Oblast:</label>
-                    <input type="text" class="form-control" id="area" name="area">
+                    <input type="text" class="form-control" id="region" name="region">
+                    @error('region')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="year">Rok:</label>
                     <input type="date" class="form-control" id="year" name="year">
+                    @error('year')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
                 <div class="mb-3 mt-3">
-                    <label for="time">Čas:</label>
+                    <label for="time">Doba realizace v měsících:</label>
                     <input type="number" class="form-control" id="time" name="time">
+                    @error('time')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="from">Období od:</label>
                     <input type="date" class="form-control" id="from" name="from">
+                    @error('from')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="to">Období do:</label>
                     <input type="date" class="form-control" id="to" name="to">
+                    @error('to')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="form-select">Typ projektu:</label>
-                        <select class="form-select form-control">
+                        <select class="form-select form-control" name="type">
                             <option selected hidden class="d-none"></option>
                             <option>Interní</option>
                             <option>Smluvní</option>
                             <option>Grant</option>                           
                         </select>
+                    @error('type')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="costs">Celkové náklady:</label>
                     <input type="number" class="form-control" id="costs" name="costs">
+                    @error('costs')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="resources">Vlastní zdroje:</label>
                     <input type="number" class="form-control" id="resources" name="resources">
+                    @error('resources')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="funding">Výše podpory:</label>
                     <input type="number" class="form-control" id="funding" name="funding">
+                    @error('funding')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
 
                 <div class="mb-3 mt-3">
                     <label for="text">Poskytovatel:</label>
                     <input type="text" class="form-control" id="provider" name="provider">
+                    @error('provider')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
                 <h2 class="p-2 my-4">Projektový tým</h2>
                 <div class="mb-3 mt-3">
                     <label for="form-select">Garant oblasti:</label>
-                        <select class="form-select form-control">
+                        <select class="form-select form-control" name="garant">
                             <option selected hidden class="d-none"></option>
                             <option></option>
                             <option></option>
                             <option></option>                           
                         </select>
+                        @error('garant')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="form-select">Řešitel:</label>
@@ -84,6 +149,11 @@
                             <option></option>
                             <option></option>                           
                         </select>
+                        @error('first-name')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="form-select">Spoluřešitelé:</label>
@@ -92,24 +162,44 @@
                             <option></option>
                             <option></option>
                             <option></option>                           
-                        </select>
+                        </select>  
                 </div>
                 <h2 class="p-2 my-4">Popis projektu</h2>
                 <div class="mb-3 mt-3">
                     <textarea class="form-control" id="project-info" name="project-info"></textarea>
+                    @error('first-name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>                
                 <h2 class="p-2 my-4">Kontaktní osoba</h2>
                 <div class="mb-3 mt-3">
                     <input type="text" class="form-control" id="contact-person" name="contact-person">
+                    @error('first-name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
                 <h2 class="p-2 my-4">Popis dat</h2>
                 <div class="mb-3 mt-3">
                     <label for="collectiong-from">Sběr dat od:</label>
                     <input type="month" class="form-control" id="collectiong-from" name="collectiong-from">
+                    @error('first-name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="collecting-to">Sběr dat do:</label>
                     <input type="month" class="form-control" id="collecting-to" name="collecting-to">
+                    @error('first-name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
                 <div class="form-check mb-3">
                     <label class="form-check-label">

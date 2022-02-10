@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\SeedController;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\ProjectController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,9 +21,19 @@ Route::get('/', [DashboardController::class, 'index'])->middleware('auth')->name
 
 Route::get('/seed', [SeedController::class, 'index']);
 
+/*
+    USERS 
+*/
 Route::get('/user-create', [UserController::class, 'create'])->middleware('auth');
 Route::post('/user-store', [UserController::class, 'store'])->middleware('auth');
 
 Route::get('/user-list', [UserController::class, 'list'])->middleware('auth');
 
 Route::get('/user-edit/{id}', [UserController::class, 'edit'])->middleware('auth');
+
+/*
+    PROJECTS
+*/
+
+Route::get('/project-create', [ProjectController::class, 'create'])->middleware('auth');
+Route::post('/project-store', [ProjectController::class, 'store'])->middleware('auth');

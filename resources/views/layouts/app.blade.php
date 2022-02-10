@@ -70,7 +70,7 @@
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Projekty<i
                         class="icon-red fa-solid fa-folder-tree mx-2"></i></a>
                 <ul class="dropdown-menu border-0 rounded-0 shadow-sm">
-                    <li><a class="dropdown-item px-2" href="/new-project">Přidat projekt<i
+                    <li><a class="dropdown-item px-2" href="/project-create">Přidat projekt<i
                                 class="icon-red fa-solid fa-folder-plus mx-2"></i></a></li>
                 </ul>
             </li>
