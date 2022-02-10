@@ -9,7 +9,7 @@
             <button type="button" class="btn-discard bg-white float-end">Zahodit změny<i
                     class="fas fa-times mx-2 fa-lg align-middle"></i></button>
             <h2 class="py-3">Nadpis karty</h2>
-            <form action="">
+            <form action="" class="p-3">
                 <div class="mb-3 mt-3">
                     <label for="text">Text:</label>
                     <input type="text" class="form-control" id="text" placeholder="Text" name="text">

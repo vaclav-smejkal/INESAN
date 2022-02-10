@@ -39,9 +39,7 @@ body {
     background-color: $primary-red;
 }
 
-.fa-users,
-.fa-home,
-.fa-user-plus {
+.icon-red {
     color: $primary-red;
 }
 
@@ -106,7 +104,8 @@ body {
     }
 }
 
-h1 {
+h1,
+h2 {
     display: inline-block;
     position: relative;
 

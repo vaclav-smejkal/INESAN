@@ -28,12 +28,12 @@
                 <div class="d-flex">
                     <li class="nav-item">
                         <a class="nav-link text-white admin" href="#">Admin<i
-                                class="fas fa-users-cog fa-lg mx-3"></i></a>
+                                class="fa-solid fa-user-gear fa-lg mx-3"></i></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white logout" href="{{ route('logout') }}"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Odhlásit
-                            <i class="fas fa-sign-out-alt fa-lg mx-3"></i></a>
+                            <i class="fa-solid fa-right-from-bracket fa-lg mx-3"></i></a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST">
                             @csrf
                         </form>
@@ -46,32 +46,32 @@
     <nav class="navbar navbar-expand-sm justify-content-center bg-white sticky-top shadow p-2 mb-2">
         <ul class="navbar-nav navigation">
             <li class="nav-item mx-4">
-                <a class="nav-link" href="/">Nástěnka<i class="fas fa-home mx-2"></i></a>
+                <a class="nav-link" href="/">Nástěnka<i class="icon-red fas fa-home mx-2"></i></a>
             </li>
             <li class="nav-item mx-4 dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Uživatelé<i
-                        class="fas fa-users mx-2"></i></a>
+                        class="icon-red fas fa-users mx-2"></i></a>
                 <ul class="dropdown-menu border-0 rounded-0 shadow-sm">
                     <li><a class="dropdown-item px-2" href="/user-create">Přidat uživatele<i
-                                class="fas fa-user-plus mx-2"></i></a></li>
+                                class="icon-red fas fa-user-plus mx-2"></i></a></li>
                                 <li><a class="dropdown-item px-2" href="/user-list">Editovat uživatele<i
-                                    class="fas fa-user-edit mx-2"></i></a></li>
+                                    class="icon-red fas fa-user-edit mx-2"></i></a></li>
                 </ul>
             </li>
             <li class="nav-item mx-4 dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dotazníky<i
-                        class="fas fa-users mx-2"></i></a>
+                        class="icon-red fa-solid fa-list mx-2"></i></a>
                 <ul class="dropdown-menu border-0 rounded-0 shadow-sm">
                     <li><a class="dropdown-item px-2" href="#">Přidat dotazník<i
-                                class="fas fa-user-plus mx-2"></i></a></li>
+                                class="icon-red fa-solid fa-plus mx-2"></i></a></li>
                 </ul>
             </li>
             <li class="nav-item mx-4 dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Projekty<i
-                        class="fas fa-users mx-2"></i></a>
+                        class="icon-red fa-solid fa-folder-tree mx-2"></i></a>
                 <ul class="dropdown-menu border-0 rounded-0 shadow-sm">
-                    <li><a class="dropdown-item px-2" href="#">Přidat projekt<i
-                                class="fas fa-user-plus mx-2"></i></a></li>
+                    <li><a class="dropdown-item px-2" href="/new-project">Přidat projekt<i
+                                class="icon-red fa-solid fa-folder-plus mx-2"></i></a></li>
                 </ul>
             </li>
             <li class="nav-item mx-4">

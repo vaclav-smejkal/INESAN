@@ -33,9 +33,7 @@ body {
   background-color: #a70a25;
 }
 
-.fa-users,
-.fa-home,
-.fa-user-plus {
+.icon-red {
   color: #a70a25;
 }
 
@@ -98,11 +96,13 @@ body {
   transform: scale(1);
 }
 
-h1 {
+h1,
+h2 {
   display: inline-block;
   position: relative;
 }
-h1:after {
+h1:after,
+h2:after {
   content: "";
   position: absolute;
   width: 100%;

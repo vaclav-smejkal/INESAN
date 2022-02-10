@@ -9,7 +9,7 @@
             <button type="button" class="btn-discard bg-white float-end">Zahodit změny<i
                     class="fas fa-times mx-2 fa-lg align-middle"></i></button>
             <h2 class="py-3">Nadpis karty</h2>
-            <form>
+            <form class="register-form">
                 <div class="mb-3 mt-3">
                     <label for="text">Jméno:</label>
                     <input type="text" class="form-control" id="firstname" name="name">
@@ -67,6 +67,7 @@
                             <option></option>
                         </select>
                 </div>
+
             </form>
         </div>
     </div>
