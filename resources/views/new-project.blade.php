@@ -166,7 +166,7 @@
                 </div>
                 <h2 class="p-2 my-4">Popis projektu</h2>
                 <div class="mb-3 mt-3">
-                    <textarea class="form-control" id="project-info" name="project-info"></textarea>
+                    <textarea class="form-control" id="project-description" name="project_description"></textarea>
                     @error('first-name')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -175,7 +175,7 @@
                 </div>                
                 <h2 class="p-2 my-4">Kontaktní osoba</h2>
                 <div class="mb-3 mt-3">
-                    <input type="text" class="form-control" id="contact-person" name="contact-person">
+                    <input type="text" class="form-control" id="contact-person" name="contact_person">
                     @error('first-name')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -229,7 +229,7 @@
                 <h2 class="p-2 my-4">Dokumenty jednotlivých projektů</h2>
                 <div class="form-check mb-3">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="documentation"> Projektová dokumentace
+                        <input class="form-check-input" type="checkbox" name="project_documentation"> Projektová dokumentace
                     </label>
                 </div>
                 <div class="form-check mb-3">
@@ -239,17 +239,17 @@
                 </div>
                 <div class="form-check mb-3">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="wage-overview"> Mzdový přehled
+                        <input class="form-check-input" type="checkbox" name="payroll_overview"> Mzdový přehled
                     </label>
                 </div>
                 <div class="form-check mb-3">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="profit-loss-overview"> Finanční přehled (výsledovka)
+                        <input class="form-check-input" type="checkbox" name="financial_overview"> Finanční přehled (výsledovka)
                     </label>
                 </div>
                 <div class="form-check mb-3">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="budget-overview"> Finanční přehled (rozpočty)
+                        <input class="form-check-input" type="checkbox" name="budget_overview"> Finanční přehled (rozpočty)
                     </label>
                 </div>
                 <div class="mb-3 mt-3">
@@ -263,7 +263,7 @@
                 </div>
                 <div class="form-check mb-3">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="final-report"> Závěrečná zpráva
+                        <input class="form-check-input" type="checkbox" name="final_report"> Závěrečná zpráva
                     </label>
                 </div>
                 <p>Průběžné zprávy za jednotlivé roky:</p>

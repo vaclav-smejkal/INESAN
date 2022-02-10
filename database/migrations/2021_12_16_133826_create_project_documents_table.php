@@ -19,8 +19,8 @@ class CreateProjectDocumentsTable extends Migration
             $table->boolean('dpp');
             $table->boolean('payroll_overview');
             $table->boolean('financial_overview');
+            $table->boolean('budget_overview');
             $table->boolean('final_report');
-            $table->boolean('continous_report');
             $table->boolean('close_contract');
             $table->foreignId('project_id')->constrained();
         });

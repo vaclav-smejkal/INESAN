@@ -16,15 +16,16 @@ class ProjectDocument extends Model
         'dpp',
         'payroll_overview',
         'financial_overview',
+        'budget_overview',
         'final_report',
         'continous_report',
         'close_contract',
         'project_id',
     ];
 
-    //M:N UserProjectDocument
+    //1:1 UserProjectDocument
     public function projects()
     {
-        return $this->belongsTo(Project::class);
+        return $this->hasOne(Project::class);
     }
 }
