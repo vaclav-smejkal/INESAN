@@ -32,7 +32,6 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        //var_dump($request);
         if ($request['user-id'] == null) {
             Validator::make(
                 $request->all(),
@@ -105,8 +104,6 @@ class UserController extends Controller
             }
             $user->save();
         }
-
-
 
         return redirect('/user-create')->with('message', 'Uživatel byl přidán');
     }

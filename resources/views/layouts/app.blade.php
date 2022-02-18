@@ -54,24 +54,26 @@
                 <ul class="dropdown-menu border-0 rounded-0 shadow-sm">
                     <li><a class="dropdown-item px-2" href="/user-create">Přidat uživatele<i
                                 class="fas fa-user-plus mx-2"></i></a></li>
-                                <li><a class="dropdown-item px-2" href="/user-list">Editovat uživatele<i
-                                    class="fas fa-user-edit mx-2"></i></a></li>
+                    <li><a class="dropdown-item px-2" href="/user-list">Editovat uživatele<i
+                                class="fas fa-user-edit mx-2"></i></a></li>
                 </ul>
             </li>
             <li class="nav-item mx-4 dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dotazníky<i
                         class="fas fa-users mx-2"></i></a>
                 <ul class="dropdown-menu border-0 rounded-0 shadow-sm">
-                    <li><a class="dropdown-item px-2" href="#">Přidat dotazník<i
-                                class="fas fa-user-plus mx-2"></i></a></li>
+                    <li><a class="dropdown-item px-2" href="#">Přidat dotazník<i class="fas fa-user-plus mx-2"></i></a>
+                    </li>
                 </ul>
             </li>
             <li class="nav-item mx-4 dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Projekty<i
                         class="fas fa-users mx-2"></i></a>
                 <ul class="dropdown-menu border-0 rounded-0 shadow-sm">
-                    <li><a class="dropdown-item px-2" href="#">Přidat projekt<i
+                    <li><a class="dropdown-item px-2" href="/project-create">Přidat projekt<i
                                 class="fas fa-user-plus mx-2"></i></a></li>
+                    <li><a class="dropdown-item px-2" href="/project-list">Editovat projekty<i
+                                class="fas fa-user-edit mx-2"></i></a></li>
                 </ul>
             </li>
             <li class="nav-item mx-4">
